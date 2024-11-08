@@ -91,6 +91,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_base:
+    dependency: "direct main"
+    description:
+      name: flutter_web_base
+      sha256: "935c43df03a0c075dda542f9a35c48c41739284d4bd1c08bbe1a357ccc48cf85"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.10"
   get:
     dependency: "direct main"
     description:
@@ -251,6 +259,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  responsive_builder:
+    dependency: transitive
+    description:
+      name: responsive_builder
+      sha256: f01bc341c73b6db7bd6319e22d2c160f28f924399ae46e6699ecc8160ba2765c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.3"
+  size_config:
+    dependency: transitive
+    description:
+      name: size_config
+      sha256: "912d8e55bb563a71e30f66be0719d2a6437c3500adb01b9e52681dc2362d62e0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
   sizer:
     dependency: "direct main"
     description:
