@@ -17,6 +17,17 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
   @override
   Widget build(BuildContext context) {
     return NavBar1(
+      title: Center(
+        child: Text(
+          "Software Devloper",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.normal,
+            fontFamily: "Lufga",
+            color: Colors.white,
+          ),
+        ),
+      ),
       backgroundColor: Colors.black,
       showDivider: false,
       navBarActions: [
@@ -49,7 +60,7 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
                       ],
                     ))
                 : Container(
-                    width: _hoverIndex == i ? 136 : 108,
+                    width: _hoverIndex == i ? 136 : 106,
                     height: 66,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(60),
