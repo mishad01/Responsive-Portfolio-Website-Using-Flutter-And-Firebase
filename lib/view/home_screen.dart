@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/resources/nav_titles.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,18 +25,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.black,
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  for (int i = 0; i < 5; i++)
+                  for (int i = 0; i < navTitles.length; i++)
                     TextButton(
                       onPressed: () {},
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: Text(navTitles[i],
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: "Lufga",
+                              color: Colors.white)),
                     )
                 ],
               ),
