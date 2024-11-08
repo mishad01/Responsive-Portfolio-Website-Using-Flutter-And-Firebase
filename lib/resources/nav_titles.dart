@@ -1,7 +1,7 @@
 List<String> navTitles = [
   "Home",
   "About",
-  "Services",
+  "Service",
   "Mishad",
   "Resume",
   "Project",

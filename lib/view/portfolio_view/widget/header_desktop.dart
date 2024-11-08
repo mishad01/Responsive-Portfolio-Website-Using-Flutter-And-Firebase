@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_base/flutter_web_base.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/nav_titles.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
 
 class HeaderDesktop extends StatefulWidget {
   const HeaderDesktop({
@@ -44,7 +45,18 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
                     onPressed: () {},
                     child: Row(
                       children: [
-                        Icon(Icons.person, size: 30),
+                        Container(
+                          height: 40,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: WebColors.themeColor),
+                          child: Icon(
+                            Icons.person,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
                         SizedBox(width: 10),
                         Text(
                           "Mishad",
@@ -60,7 +72,7 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
                       ],
                     ))
                 : Container(
-                    width: _hoverIndex == i ? 136 : 106,
+                    width: _hoverIndex == i ? 136 : 105,
                     height: 66,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(60),
