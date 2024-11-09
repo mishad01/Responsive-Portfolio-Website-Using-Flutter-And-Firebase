@@ -41,6 +41,7 @@ dependencies:
   http: ^1.2.2
   flutter_web_base: ^0.0.10
   flutter_svg: ^2.0.14
+  carousel_slider: ^5.0.0
 
 
 

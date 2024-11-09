@@ -18,20 +18,19 @@ class _PortfolioWebsiteState extends State<PortfolioWebsite> {
       endDrawer: const Drawer(
         child: DrawerWidget(),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
-          child: Column(
-            children: [
-              // Header
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: HeaderDesktop(),
-              ),
-              // Details Screen View
-              DetailsScreenView(),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 16, right: 16),
+        child: ListView(
+          physics: AlwaysScrollableScrollPhysics(),
+          children: [
+            // Header
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: HeaderDesktop(),
+            ),
+            // Details Screen View
+            DetailsScreenView(),
+          ],
         ),
       ),
     );
