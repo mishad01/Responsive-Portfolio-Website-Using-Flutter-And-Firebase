@@ -9,4 +9,10 @@ class AssetsPath {
   static const String star = "$vectors/star.svg";
   static const String bg1 = "$vectors/bg1.svg";
   static const String bg2 = "$vectors/bg2.png";
+  static const String serviceBg = "$vectors/service_bg.png";
+  static const String glassFrame = "$vectors/glass_frame.svg";
+  static const String pr1 = "$images/pr1.png";
+  static const String pr2 = "$images/pr2.png";
+  static const String pr3 = "$images/pr3.png";
+  static const String experienceDivider = "$vectors/experience_divider.svg";
 }
