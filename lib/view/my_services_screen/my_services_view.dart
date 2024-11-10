@@ -29,7 +29,7 @@ class _MyServicesViewState extends State<MyServicesView> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 150, right: 150, top: 20),
+            padding: const EdgeInsets.only(left: 100, right: 40, top: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -41,7 +41,7 @@ class _MyServicesViewState extends State<MyServicesView> {
                   ),
                   child: Center(
                     child: RichText(
-                      text: TextSpan(
+                      text: const TextSpan(
                         children: [
                           TextSpan(
                             text: "My ",
@@ -64,8 +64,8 @@ class _MyServicesViewState extends State<MyServicesView> {
                     ),
                   ),
                 ),
-                Text(
-                  "Scroll Up ",
+                const Text(
+                  "Slide Up Images",
                   style: TextStyle(
                       fontFamily: "Lufga",
                       fontSize: 48,
@@ -73,7 +73,9 @@ class _MyServicesViewState extends State<MyServicesView> {
                       color: Colors.white),
                 ),
                 Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDuis lacus nunc, posuere in justo vulputate, bibendum sodales ")
+                  "Welcome to my project showcase!\n Here, you'll find a selection of my work spanning various fields,\nincluding mobile app development, web applications, and data science.",
+                  textAlign: TextAlign.end,
+                )
               ],
             ),
           ),

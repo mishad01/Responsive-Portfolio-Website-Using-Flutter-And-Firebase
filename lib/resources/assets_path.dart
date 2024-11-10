@@ -15,4 +15,5 @@ class AssetsPath {
   static const String pr2 = "$images/pr2.png";
   static const String pr3 = "$images/pr3.png";
   static const String experienceDivider = "$vectors/experience_divider.svg";
+  static const String languageLogo = "$vectors/language_logo.png";
 }
