@@ -43,7 +43,7 @@ class _PortfolioWebsiteState extends State<PortfolioWebsite> {
                 child: HeaderDesktop(),
               ),
               // Details Screen View
-              DetailsScreenView(),
+              DetailsScreenView(), //3
               MyServicesView(),
               WorkExperienceView()
             ],
