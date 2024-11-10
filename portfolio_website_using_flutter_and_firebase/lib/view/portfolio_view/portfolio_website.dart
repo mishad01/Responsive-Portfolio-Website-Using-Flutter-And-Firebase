@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/details_screen_view/details_screen_view.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/view/education_screen_view/education_screen_view.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/view/my_expertise_view/my_expertise_view.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/my_services_screen/my_services_view.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/portfolio_view/widget/drawer.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/portfolio_view/widget/header_desktop.dart';
@@ -45,7 +47,9 @@ class _PortfolioWebsiteState extends State<PortfolioWebsite> {
               // Details Screen View
               DetailsScreenView(), //3
               MyServicesView(),
-              WorkExperienceView()
+              WorkExperienceView(),
+              EducationScreenView(),
+              MyExpertiseView(),
             ],
           ),
         ),
