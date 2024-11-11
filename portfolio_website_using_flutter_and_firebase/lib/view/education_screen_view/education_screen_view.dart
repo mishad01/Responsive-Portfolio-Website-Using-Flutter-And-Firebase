@@ -70,11 +70,12 @@ class _EducationScreenViewState extends State<EducationScreenView> {
           SizedBox(height: 20),
           CarouselSlider(
             options: CarouselOptions(
-              height: 400.0,
-              viewportFraction: 0.33,
-              enableInfiniteScroll: true,
-              initialPage: 0,
-            ),
+                height: 400.0,
+                viewportFraction: 0.33,
+                enableInfiniteScroll: true,
+                initialPage: 0,
+                autoPlay: true,
+                autoPlayAnimationDuration: Duration(seconds: 1)),
             items: institution.map((item) {
               return Builder(
                 builder: (BuildContext context) {

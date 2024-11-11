@@ -67,6 +67,7 @@ class _MyPublicationsState extends State<MyPublications> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 30),
             Center(
               child: RichText(
                 text: TextSpan(
