@@ -38,7 +38,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 600,
+      height: 650,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         image: DecorationImage(
@@ -49,6 +49,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 40),
           RichText(
             text: TextSpan(
               text: "MY ",
@@ -97,7 +98,8 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
                         color: Colors.black.withOpacity(0.7),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding:
+                            const EdgeInsets.only(left: 20, right: 20, top: 10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,

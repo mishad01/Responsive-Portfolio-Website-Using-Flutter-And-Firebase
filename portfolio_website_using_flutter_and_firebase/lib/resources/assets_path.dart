@@ -24,4 +24,5 @@ class AssetsPath {
   static const String mb = "$vectors/mb.png";
   static const String bd = "$vectors/bd.png";
   static const String ml = "$vectors/ml.png";
+  static const String head = "$vectors/head.png";
 }
