@@ -4,12 +4,13 @@ class AssetsPath {
   static const String vectors = "$images/vectors";
   static const String institution = "$images/institution";
   static const String person = "$images/person.png";
+  static const String pic = "$images/pic.jpg";
   static const String v1 = "$vectors/v1.svg";
   static const String v2 = "$vectors/v2.svg";
   static const String d3 = "$vectors/d3.svg";
   static const String star = "$vectors/star.svg";
   static const String bg1 = "$vectors/bg1.svg";
-  static const String bg2 = "$vectors/bg2.png";
+  static const String v3 = "$vectors/v3.svg";
   static const String serviceBg = "$vectors/service_bg.png";
   static const String glassFrame = "$vectors/glass_frame.svg";
   static const String pr1 = "$images/pr1.png";

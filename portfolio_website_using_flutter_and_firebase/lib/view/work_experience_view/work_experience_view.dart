@@ -42,7 +42,7 @@ class _WorkExperienceViewState extends State<WorkExperienceView> {
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             Container(
               height: 738,
               child: Column(

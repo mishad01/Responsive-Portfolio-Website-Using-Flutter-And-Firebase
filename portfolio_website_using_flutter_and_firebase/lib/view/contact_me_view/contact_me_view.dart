@@ -66,6 +66,7 @@ class _ContactMeViewState extends State<ContactMeView> {
           ),
           const SizedBox(height: 20),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 width: 700,
@@ -115,6 +116,24 @@ class _ContactMeViewState extends State<ContactMeView> {
                   ),
                 ),
               ),
+              Container(
+                width: 700,
+                child: Column(
+                  children: [
+                    Container(
+                      width: 400,
+                      height: 400,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Image.asset(
+                          AssetsPath.pic,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           )
         ],
