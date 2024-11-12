@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class ExperienceWidget extends StatelessWidget {
   const ExperienceWidget({
@@ -28,14 +29,14 @@ class ExperienceWidget extends StatelessWidget {
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
-                  fontSize: 40,
+                  fontSize: 17.sp,
                   fontFamily: "Lufga"),
             ),
             Text(
               date,
               style: TextStyle(
                 color: Color(0xff98A2B3),
-                fontSize: 20,
+                fontSize: 13.sp,
                 fontFamily: "Lufga",
               ),
               maxLines: 3,
@@ -51,14 +52,14 @@ class ExperienceWidget extends StatelessWidget {
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
-                  fontSize: 40,
+                  fontSize: 17.sp,
                   fontFamily: "Lufga"),
             ),
             Text(
               details,
               style: TextStyle(
                 color: Color(0xff98A2B3),
-                fontSize: 20,
+                fontSize: 13.sp,
                 fontFamily: "Lufga",
               ),
               maxLines: 3,

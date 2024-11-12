@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/assets_path.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
+import 'package:sizer/sizer.dart';
 
 class DetailsScreenView extends StatefulWidget {
   const DetailsScreenView({
@@ -48,7 +49,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                   fontFamily: "Lufga",
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20,
+                                  fontSize: 12.sp,
                                 )),
                           ),
                         ),
@@ -63,14 +64,14 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                   TextSpan(
                                     text: "I'm ",
                                     style: GoogleFonts.urbanist(
-                                        fontSize: 95.57,
+                                        fontSize: 30.sp,
                                         fontWeight: FontWeight.w600,
                                         height: 1),
                                   ),
                                   TextSpan(
                                     text: "Mishad,",
                                     style: GoogleFonts.urbanist(
-                                        fontSize: 95.57,
+                                        fontSize: 30.sp,
                                         fontWeight: FontWeight.w600,
                                         color: WebColors.themeColor,
                                         height: 1),
@@ -78,27 +79,31 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                 ],
                               ),
                             ),
-                            RichText(
-                              text: TextSpan(
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextSpan(
-                                    text: "Software ",
-                                    style: GoogleFonts.urbanist(
-                                      fontSize: 95.57,
-                                      fontWeight: FontWeight.w600,
-                                      height: 1,
+                                  Center(
+                                    child: Text(
+                                      "Software Engineer",
+                                      style: GoogleFonts.urbanist(
+                                        fontSize: 30.sp,
+                                        fontWeight: FontWeight.w600,
+                                        height: 1,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ),
-                                  TextSpan(
-                                    text: "Engineer",
-                                    style: GoogleFonts.urbanist(
-                                        fontSize: 95.57,
-                                        fontWeight: FontWeight.w600,
-                                        height: 1),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 17.w),
+                                    child: SvgPicture.asset(
+                                      AssetsPath.v2,
+                                      width: 4.4.w,
+                                    ),
                                   ),
                                 ],
                               ),
-                            )
+                            ),
                           ],
                         ),
                   SizedBox(height: isHover ? 352 : 115),
@@ -131,14 +136,15 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
             ),
           ),
           //v2
-          isHover
+          /*isHover
               ? Container()
               : Positioned(
-                  top: 250,
-                  left: 250,
-                  //right: 910,
+                  bottom: 20,
+                  left: 1,
+                  right: 928,
+                  top: 1,
                   child: Center(child: SvgPicture.asset(AssetsPath.v2)),
-                ),
+                ),*/
           //v1
           isHover
               ? Container()
@@ -160,14 +166,14 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SvgPicture.asset(AssetsPath.d3),
-                SizedBox(height: 20),
+                SizedBox(height: 13.sp),
                 Text(
                   "Jenny’s Exceptional product design\nensure our website’s success.\nHighly Recommended",
                   style: TextStyle(
                     fontFamily: "Lufga",
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
-                    fontSize: 20,
+                    fontSize: 13.sp,
                     height: 1.2,
                   ),
                 ),
@@ -190,7 +196,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                   style: GoogleFonts.urbanist(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 47,
+                    fontSize: 20.sp,
                   ),
                 ),
                 Text(
@@ -198,7 +204,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                   style: GoogleFonts.urbanist(
                     color: Colors.black,
                     fontWeight: FontWeight.normal,
-                    fontSize: 20,
+                    fontSize: 13.sp,
                   ),
                 ),
               ],

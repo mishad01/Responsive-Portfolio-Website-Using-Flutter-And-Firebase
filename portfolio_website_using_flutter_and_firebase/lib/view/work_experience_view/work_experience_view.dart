@@ -3,7 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/assets_path.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/utils/utils.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/work_experience_view/widgets/experience_widget.dart';
+import 'package:sizer/sizer.dart';
 
 class WorkExperienceView extends StatefulWidget {
   const WorkExperienceView({super.key});
@@ -15,8 +17,14 @@ class WorkExperienceView extends StatefulWidget {
 class _WorkExperienceViewState extends State<WorkExperienceView> {
   @override
   Widget build(BuildContext context) {
+    final mediaQueryScreenWidth = Utils.getScreenWidth(context);
+    final mediaQueryScreenHeight = Utils.getScreenHeight(context);
+    final responsiveTextSize = mediaQueryScreenWidth;
     return Padding(
-      padding: const EdgeInsets.only(left: 26, right: 26),
+      padding: EdgeInsets.only(
+        left: mediaQueryScreenWidth * 0.05,
+        right: mediaQueryScreenWidth * 0.05,
+      ),
       child: Container(
         width: 1440,
         height: 900,
@@ -28,14 +36,14 @@ class _WorkExperienceViewState extends State<WorkExperienceView> {
                 text: "My ",
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 64,
+                    fontSize: 22.sp,
                     fontFamily: "Lufga"),
                 children: [
                   TextSpan(
                     text: "Work Experiences",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 64,
+                        fontSize: 22.sp,
                         fontFamily: "Lufga",
                         color: WebColors.themeColor),
                   ),
@@ -81,6 +89,9 @@ class _WorkExperienceViewState extends State<WorkExperienceView> {
                         child: SvgPicture.asset(AssetsPath.experienceDivider),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 16.h,
                   ),
                   RichText(
                     textAlign: TextAlign.center,

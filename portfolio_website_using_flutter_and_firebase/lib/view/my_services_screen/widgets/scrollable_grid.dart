@@ -2,12 +2,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/resources/assets_path.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/utils/utils.dart';
+import 'package:sizer/sizer.dart';
 
 class MyCustomScrollBehavior extends MaterialScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
         PointerDeviceKind.invertedStylus,
         PointerDeviceKind.mouse,
+        PointerDeviceKind.touch
       };
 }
 
@@ -18,57 +21,53 @@ class ScrollableGrid extends StatelessWidget {
       behavior: MyCustomScrollBehavior(),
       child: Container(
         width: double.infinity,
-        height: 700,
+        height: 100.h, // Adjusted for responsiveness
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
+            padding:
+                EdgeInsets.symmetric(horizontal: 2.w), // Responsive padding
             child: GridView.builder(
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+                crossAxisCount: Utils().getCrossCount(context),
+                crossAxisSpacing: 2.w, // Responsive cross axis spacing
+                mainAxisSpacing: 2.h, // Responsive main axis spacing
                 childAspectRatio: 1.1,
               ),
               itemCount: 12,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return Center(
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        width: 500,
-                        height: 400,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.white),
+                  child: Container(
+                    width: 50.w, // Responsive width
+                    height: 55.h, // Responsive height
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2.w),
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Coffee Shop App",
+                          style: TextStyle(
+                              fontSize: 16.sp, // Responsive font size
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Lufga"),
                         ),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Coffe Shop App",
-                              style: TextStyle(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "Lufga"),
-                            ),
-                            SizedBox(height: 20),
-                            Container(
-                              width: 450, // Adjust as needed for the right fit
-                              height: 320, // Adjust as needed for the right fit
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Image.asset(
-                                AssetsPath.pr1,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ],
+                        Flexible(
+                          child: Container(
+                            width: 28.w, // Responsive width
+                            height: 45.h,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                image: DecorationImage(
+                                    image: AssetImage(AssetsPath.pr1),
+                                    fit: BoxFit.contain)),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               },
