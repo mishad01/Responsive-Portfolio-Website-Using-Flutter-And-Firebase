@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_using_flutter_and_firebase/resources/assets_path.dart';
-import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/utils/export.dart';
 import 'package:portfolio_website_using_flutter_and_firebase/view/education_screen_view/widgets/institution_card.dart';
 
 class EducationScreenView extends StatefulWidget {
@@ -44,14 +43,14 @@ class _EducationScreenViewState extends State<EducationScreenView> {
               text: "My ",
               style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 64,
+                  fontSize: 22.sp,
                   fontFamily: "Lufga"),
               children: [
                 TextSpan(
                   text: "Education",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 64,
+                      fontSize: 22.sp,
                       fontFamily: "Lufga",
                       color: WebColors.themeColor),
                 ),

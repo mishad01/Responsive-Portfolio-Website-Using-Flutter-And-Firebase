@@ -79,34 +79,20 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                 ],
                               ),
                             ),
-                            Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Center(
-                                    child: Text(
-                                      "Software Engineer",
-                                      style: GoogleFonts.urbanist(
-                                        fontSize: 30.sp,
-                                        fontWeight: FontWeight.w600,
-                                        height: 1,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 17.w),
-                                    child: SvgPicture.asset(
-                                      AssetsPath.v2,
-                                      width: 4.4.w,
-                                    ),
-                                  ),
-                                ],
+                            Center(
+                              child: Text(
+                                "Software Engineer",
+                                style: GoogleFonts.urbanist(
+                                  fontSize: 30.sp,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ],
                         ),
-                  SizedBox(height: isHover ? 352 : 115),
+                  SizedBox(height: isHover ? 360 : 115),
                   SvgPicture.asset(AssetsPath.bg1),
                 ],
               ),
