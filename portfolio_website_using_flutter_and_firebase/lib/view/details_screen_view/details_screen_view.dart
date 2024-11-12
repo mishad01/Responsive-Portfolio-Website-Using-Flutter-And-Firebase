@@ -129,7 +129,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
             right: 1,
             child: Center(
               child: Image.asset(
-                AssetsPath.person,
+                AssetsPath.mishad,
                 width: 752,
                 height: 636,
               ),

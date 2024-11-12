@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_using_flutter_and_firebase/resources/assets_path.dart';
-import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/utils/export.dart';
 
 class MyExpertiseView extends StatefulWidget {
   const MyExpertiseView({super.key});
@@ -83,7 +82,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
           SizedBox(
             height: 420,
             child: Padding(
-              padding: const EdgeInsets.only(left: 120),
+              padding: const EdgeInsets.only(left: 20, right: 120),
               child: ListView.builder(
                 itemCount: 3,
                 scrollDirection: Axis.horizontal,
