@@ -19,7 +19,6 @@ class _WorkExperienceViewState extends State<WorkExperienceView> {
     return Container(
       width: 144.w,
       height: 107.h,
-      color: Colors.yellow,
       child: Column(
         children: [
           SizedBox(height: 3.h),

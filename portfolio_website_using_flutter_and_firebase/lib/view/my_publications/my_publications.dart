@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_using_flutter_and_firebase/resources/web_colors.dart';
+import 'package:portfolio_website_using_flutter_and_firebase/utils/export.dart';
 
 class MyPublications extends StatefulWidget {
   const MyPublications({super.key});
@@ -60,7 +60,7 @@ class _MyPublicationsState extends State<MyPublications> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 750,
+      height: 100.0.h,
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.only(left: 50),
@@ -74,14 +74,14 @@ class _MyPublicationsState extends State<MyPublications> {
                   text: "My ",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 64,
+                      fontSize: 22.sp,
                       fontFamily: "Lufga"),
                   children: [
                     TextSpan(
                       text: "Publications",
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 64,
+                          fontSize: 22.sp,
                           fontFamily: "Lufga",
                           color: WebColors.themeColor),
                     ),
@@ -89,12 +89,12 @@ class _MyPublicationsState extends State<MyPublications> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 0.5.h),
             Center(
               child: Text(
                 "What I Research",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 13.sp,
                   fontWeight: FontWeight.w300,
                   color: Colors.black,
                   fontFamily: "Lufga",
@@ -105,7 +105,7 @@ class _MyPublicationsState extends State<MyPublications> {
               "Journal(s)",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 13.sp,
                   color: Colors.black),
             ),
             SizedBox(height: 10),
@@ -122,14 +122,17 @@ class _MyPublicationsState extends State<MyPublications> {
                           "${index + 1}. ${journals[index]["topic"]}",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                              fontSize: 12.sp,
                               color: Colors.black),
                         ),
                         Text(
                           journals[index]["supervisor"]!,
-                          style: TextStyle(fontSize: 14, color: Colors.black),
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: Colors.black,
+                          ),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 0.5.h),
                       ],
                     );
                   },
@@ -140,7 +143,7 @@ class _MyPublicationsState extends State<MyPublications> {
               "Conference(s)",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 12.sp,
                   color: Colors.black),
             ),
             Container(
@@ -156,7 +159,7 @@ class _MyPublicationsState extends State<MyPublications> {
                           "${index + 1}. ${conference[index]["topic"]}",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                              fontSize: 12.sp,
                               color: Colors.black),
                         ),
                         Text(

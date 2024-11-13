@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class ReferenceCard extends StatelessWidget {
   const ReferenceCard({
@@ -14,14 +15,14 @@ class ReferenceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.symmetric(horizontal: 5.0),
+      margin: EdgeInsets.symmetric(horizontal: 0.5.w),
       decoration: BoxDecoration(
           color: isHovered
               ? Colors.green.withOpacity(0.5)
               : Colors.grey.withOpacity(0.5),
           borderRadius: BorderRadius.circular(20)),
       child: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+        padding: EdgeInsets.only(left: 1.w, right: 1.w, top: 3.h),
         child: Column(
           children: [
             Container(
@@ -43,7 +44,7 @@ class ReferenceCard extends StatelessWidget {
             Text(
               item["title"]!,
               style: TextStyle(
-                fontSize: 40,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
                 fontFamily: "Lufga",
@@ -52,7 +53,7 @@ class ReferenceCard extends StatelessWidget {
             Text(
               item["pos"]!,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 13.sp,
                 color: Colors.black,
                 fontFamily: "Lufga",
                 fontWeight: FontWeight.w500,
@@ -61,7 +62,7 @@ class ReferenceCard extends StatelessWidget {
             Text(
               item["inst"]!,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 12.sp,
                 color: Colors.black,
                 fontFamily: "Lufga",
               ),

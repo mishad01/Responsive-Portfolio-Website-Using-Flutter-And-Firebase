@@ -19,23 +19,34 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 1440,
-      height: 746,
+      width: double.infinity,
+      height: 100.h,
+      color: Colors.yellow,
       child: Stack(
         children: [
+          //V1
+          isHover
+              ? Container()
+              : Positioned(
+                  top: 1.h,
+                  left: 9.8.w,
+                  right: 1.h,
+                  child: Center(child: SvgPicture.asset(AssetsPath.v1)),
+                ),
           //Hello
           Positioned(
-            top: 40,
+            top: 4.h,
             left: 1,
             right: 1,
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   isHover
                       ? Container()
                       : Container(
-                          height: 45,
-                          width: 103,
+                          height: 4.5.h,
+                          width: 7.3.w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(38),
                             color: Colors.white,
@@ -53,7 +64,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                 )),
                           ),
                         ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 1.5.h),
                   isHover
                       ? Container()
                       : Column(
@@ -64,14 +75,14 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                                   TextSpan(
                                     text: "I'm ",
                                     style: GoogleFonts.urbanist(
-                                        fontSize: 30.sp,
+                                        fontSize: 28.sp,
                                         fontWeight: FontWeight.w600,
                                         height: 1),
                                   ),
                                   TextSpan(
                                     text: "Mishad,",
                                     style: GoogleFonts.urbanist(
-                                        fontSize: 30.sp,
+                                        fontSize: 28.sp,
                                         fontWeight: FontWeight.w600,
                                         color: WebColors.themeColor,
                                         height: 1),
@@ -98,6 +109,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
               ),
             ),
           ),
+
           AnimatedPositioned(
             duration: Duration(milliseconds: 250), // Adjust duration as needed
             curve: Curves.easeInOut, // Customize the animation curve
@@ -110,7 +122,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
           ),
           //person
           Positioned(
-            top: 182,
+            top: 18.h,
             left: 1,
             right: 1,
             child: Center(
@@ -121,25 +133,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
               ),
             ),
           ),
-          //v2
-          /*isHover
-              ? Container()
-              : Positioned(
-                  bottom: 20,
-                  left: 1,
-                  right: 928,
-                  top: 1,
-                  child: Center(child: SvgPicture.asset(AssetsPath.v2)),
-                ),*/
-          //v1
-          isHover
-              ? Container()
-              : Positioned(
-                  top: 20,
-                  left: 128,
-                  right: 1,
-                  child: Center(child: SvgPicture.asset(AssetsPath.v1)),
-                ),
+
           //Jenny’s
           AnimatedPositioned(
             duration: Duration(milliseconds: 250),
