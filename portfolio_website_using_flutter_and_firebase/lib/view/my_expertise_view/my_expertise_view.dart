@@ -20,7 +20,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
     {
       "img": AssetsPath.bd,
       "title": "Backend Development",
-      "languages": "Firebase, Node.js,MongoDB,Express",
+      "languages": "Firebase, Sql, Sql lite, Node.js,MongoDB, Express",
       "details":
           "Skilled in building scalable backends using Node.js with Express js and working with MongoDB for database management. Experienced in full-stack development with the MERN stack (MongoDB, Express, Node.js). Familiar with REST API design, authentication, and deployment."
     },
@@ -37,138 +37,158 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 650,
+      height: 85.h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(3.w),
         image: DecorationImage(
           image: AssetImage(AssetsPath.serviceBg),
           fit: BoxFit.cover,
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Wrap(
         children: [
-          SizedBox(height: 40),
-          RichText(
-            text: TextSpan(
-              text: "MY ",
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 64,
-                  fontFamily: "Lufga",
-                  color: Colors.white),
+          Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                TextSpan(
-                  text: "EXPERTISE",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 64,
-                      fontFamily: "Lufga",
-                      color: WebColors.themeColor),
+                SizedBox(height: 4.h),
+                RichText(
+                  text: TextSpan(
+                    text: "MY ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 4.2.w,
+                        fontFamily: "Lufga",
+                        color: Colors.white),
+                    children: [
+                      TextSpan(
+                        text: "EXPERTISE",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 4.2.w,
+                            fontFamily: "Lufga",
+                            color: WebColors.themeColor),
+                      ),
+                    ],
+                  ),
                 ),
+                Text(
+                  "What can I do",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                    fontFamily: "Lufga",
+                  ),
+                ),
+                SizedBox(height: 2.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    for (int index = 0; index < expertise.length; index++)
+                      Row(
+                        children: [
+                          Wrap(
+                            children: [
+                              SizedBox(
+                                height: 55.h,
+                                width: 30.w,
+                                child: Wrap(
+                                  children: [
+                                    Container(
+                                      height: 55.h,
+                                      width: 30.w,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(30),
+                                        color: Colors.black.withOpacity(0.7),
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 2.w, right: 2.w, top: 1.h),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Center(
+                                              child: SizedBox(
+                                                width: 15.h,
+                                                height: 15.h,
+                                                child: Image.asset(
+                                                    expertise[index]["img"]!),
+                                              ),
+                                            ),
+                                            Text(
+                                              expertise[index]["title"]!,
+                                              style: TextStyle(
+                                                fontSize: 16.sp,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            SizedBox(height: 1.h),
+                                            RichText(
+                                              text: TextSpan(
+                                                text: "Technologies: ",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14.sp,
+                                                    fontFamily: "Lufga",
+                                                    color: Colors.green),
+                                                children: [
+                                                  TextSpan(
+                                                    text: expertise[index]
+                                                        ["languages"]!,
+                                                    style: TextStyle(
+                                                      fontSize: 12.sp,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      color: Colors.white,
+                                                      fontFamily: "Lufga",
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            SizedBox(height: 1.h),
+                                            Text(
+                                              "Details",
+                                              style: TextStyle(
+                                                fontSize: 14.sp,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.green,
+                                              ),
+                                            ),
+                                            Text(
+                                              expertise[index]["details"]!,
+                                              style: TextStyle(
+                                                fontSize: 12.sp,
+                                                fontWeight: FontWeight.w300,
+                                                color: Colors.white,
+                                              ),
+                                              maxLines: 5,
+                                              overflow: TextOverflow.ellipsis,
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                  ],
+                )
               ],
             ),
           ),
-          Text(
-            "What can I do",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w300,
-              color: Colors.white,
-              fontFamily: "Lufga",
-            ),
-          ),
-          SizedBox(height: 20),
-          SizedBox(
-            height: 420,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20, right: 120),
-              child: ListView.builder(
-                itemCount: 3,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Container(
-                      height: 500,
-                      width: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.black.withOpacity(0.7),
-                      ),
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(left: 20, right: 20, top: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Center(
-                              child: SizedBox(
-                                width: 100,
-                                height: 100,
-                                child: Image.asset(expertise[index]["img"]!),
-                              ),
-                            ),
-                            Text(
-                              expertise[index]["title"]!,
-                              style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            RichText(
-                              text: TextSpan(
-                                text: "Technologies: ",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                    fontFamily: "Lufga",
-                                    color: Colors.green),
-                                children: [
-                                  TextSpan(
-                                    text: expertise[index]["languages"]!,
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.white,
-                                      fontFamily: "Lufga",
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              "Details",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.green,
-                              ),
-                            ),
-                            Text(
-                              expertise[index]["details"]!,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                              maxLines: 5,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.start,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          )
         ],
       ),
     );

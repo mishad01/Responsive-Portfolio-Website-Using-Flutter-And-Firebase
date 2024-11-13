@@ -18,7 +18,8 @@ class _WorkExperienceViewState extends State<WorkExperienceView> {
   Widget build(BuildContext context) {
     return Container(
       width: 144.w,
-      height: 115.h,
+      height: 107.h,
+      color: Colors.yellow,
       child: Column(
         children: [
           SizedBox(height: 3.h),

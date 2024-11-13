@@ -41,10 +41,10 @@ class _PortfolioWebsiteState extends State<PortfolioWebsite> {
               // Details Screen View
               /*DetailsScreenView(),
               MyServicesView(),*/
-              WorkExperienceView(),
-              EducationScreenView(),
-              /*MyExpertiseView(),
-              MyPublications(),
+              //WorkExperienceView(),
+              //EducationScreenView(),
+              MyExpertiseView(),
+              /* MyPublications(),
               MyReferencesView(),
               ContactMeView(),*/
             ],
