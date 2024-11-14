@@ -96,6 +96,16 @@ class _DetailsScreenView2State extends State<DetailsScreenView2> {
               alignment: Alignment.bottomCenter,
             ),
           ),
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 250), // Adjust duration as needed
+            curve: Curves.easeInOut, // Customize the animation curve
+            top: isHover
+                ? 100
+                : MediaQuery.of(context).size.height, // Start from bottom
+            left: 1,
+            right: 50,
+            child: SvgPicture.asset(AssetsPath.v3),
+          ),
           Image.asset(
             AssetsPath.mishad,
             width: 752,
@@ -163,16 +173,6 @@ class _DetailsScreenView2State extends State<DetailsScreenView2> {
                 ),
               ],
             ),
-          ),
-          AnimatedPositioned(
-            duration: Duration(milliseconds: 250), // Adjust duration as needed
-            curve: Curves.easeInOut, // Customize the animation curve
-            top: isHover
-                ? 100
-                : MediaQuery.of(context).size.height, // Start from bottom
-            left: 1,
-            right: 50,
-            child: SvgPicture.asset(AssetsPath.v3),
           ),
           Positioned(
             top: 400,

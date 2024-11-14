@@ -5,8 +5,11 @@ import 'package:portfolio_website_using_flutter_and_firebase/resources/web_color
 import 'package:sizer/sizer.dart';
 
 class HeaderDesktop extends StatefulWidget {
+  final Function(int) onNavItemClicked;
+
   const HeaderDesktop({
     super.key,
+    required this.onNavItemClicked,
   });
 
   @override
@@ -43,7 +46,7 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
             }),
             child: i == 3
                 ? TextButton(
-                    onPressed: () {},
+                    onPressed: () => widget.onNavItemClicked(i),
                     child: Row(
                       children: [
                         Container(
@@ -71,7 +74,8 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
                           ),
                         ),
                       ],
-                    ))
+                    ),
+                  )
                 : Container(
                     width: _hoverIndex == i ? 130 : 10.w,
                     height: 66,
@@ -82,7 +86,7 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
                           : Colors.transparent,
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () => widget.onNavItemClicked(i),
                       child: Text(
                         navTitles[i],
                         style: TextStyle(

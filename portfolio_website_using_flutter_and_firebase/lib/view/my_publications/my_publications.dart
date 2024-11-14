@@ -12,51 +12,49 @@ class _MyPublicationsState extends State<MyPublications> {
   List<Map<String, String>> journals = [
     {
       "topic":
-          "Impact of COVID-19 on Mental Health: A Quantitative Analysis of Anxiety and Depression Based on Regular Life and Internet Use.",
-      "supervisor": "Rahman, M. M., Ahmed, A., Mahin, M. F., & Shetu, S. F."
+          "AI-Powered Healthcare: Predictive Models for Early Diagnosis and Risk Management.",
+      "supervisor": "Hasan, T. R., Alam, S. K., Rahman, F. H., & Khan, N. A."
     },
     {
       "topic":
-          "COVID-19 and Bangladesh: Situation Report, Comparative Analysis, and Case Study.",
-      "supervisor":
-          "Saifuzzaman, M., Rahman, M. M., Shetu, S. F., & Moon, N. N."
+          "Social Media Influence on Academic Performance: A Quantitative Study on University Students.",
+      "supervisor": "Ahmed, M. S., Kabir, T. J., Rahman, M. N., & Islam, K. S."
     },
     {
       "topic":
-          "Impactful E-Learning Framework: A New Hybrid Form of Education.",
-      "supervisor":
-          "Shetu, S. F., Rahman, M. M., Ahmed, A., Mahin, M. F., Akib, M. A. U., & Saifuzzaman, M."
+          "The Role of Big Data in Personalized Learning: A Systematic Review.",
+      "supervisor": "Bashir, S., Rahman, T. S., Aziz, F. A., & Karim, M. S."
     },
   ];
+
   List<Map<String, String>> conference = [
     {
       "topic":
-          "Future City of Bangladesh: IoT Based Autonomous Smart Sewerage and Hazard Condition Sharing System.",
-      "supervisor": "Rahman, M. M., Ahmed, A., Mahin, M. F., & Shetu, S. F."
+          "Green Urbanization: IoT Solutions for Smart Waste Management and Resource Allocation.",
+      "supervisor": "Rahman, T. H., Nahar, F. S., Ali, A. M., & Saif, R. J."
     },
     {
       "topic":
-          "Deep Learning Model for Detecting and Diagnosing Plant Disease.",
-      "supervisor":
-          "Saifuzzaman, M., Rahman, M. M., Shetu, S. F., & Moon, N. N."
-    },
-    {
-      "topic": "TraFoo: An Android Application for Food Delivery in Train.",
-      "supervisor":
-          "Rahman, M. M., Foysal, M. R., Moon, N. N., & Nur, F. N. (2021)."
-    },
-    {
-      "topic": "Pandemic Effect on Education System among University Students.",
-      "supervisor":
-          "Yesmin, F., Rahman, M. M., Saifuzzaman, M., & Moon, N. N. (2021)."
+          "Blockchain in Healthcare: A Secure Framework for Patient Data Management.",
+      "supervisor": "Khan, R. H., Alam, S. J., Hasan, T. F., & Zaman, A. K."
     },
     {
       "topic":
-          "Cyber Security Intruder Detection Using Deep Learning Approach.",
-      "supervisor":
-          "Islam, T., Rahman, M., Jabiullah, M., & Saifuzzaman, M. (2023)."
+          "EcoTransport: An AI-Based Solution for Optimized Urban Transport Routing.",
+      "supervisor": "Rashid, A. H., Karim, F. M., Nabil, S. K., & Ali, J. S."
+    },
+    {
+      "topic":
+          "Educational Impact of Virtual Reality on Science Learning in High School Students.",
+      "supervisor": "Ahmed, S. K., Bashir, M. A., Rahman, H. N., & Islam, R. A."
+    },
+    {
+      "topic":
+          "Advanced Cybersecurity in Financial Services: An AI-Based Threat Detection Model.",
+      "supervisor": "Zaman, M. R., Rahman, T. S., Islam, J. F., & Bashir, M. L."
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -92,7 +90,7 @@ class _MyPublicationsState extends State<MyPublications> {
             SizedBox(height: 0.5.h),
             Center(
               child: Text(
-                "What I Research",
+                "What I Research (Used For Development purpose)",
                 style: TextStyle(
                   fontSize: 13.sp,
                   fontWeight: FontWeight.w300,

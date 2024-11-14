@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class DetailsCard extends StatelessWidget {
   const DetailsCard({
@@ -20,7 +21,7 @@ class DetailsCard extends StatelessWidget {
         title: Text(
           title,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 14.sp,
             fontWeight: FontWeight.w300,
             color: Colors.white,
             fontFamily: "Lufga",
@@ -29,12 +30,12 @@ class DetailsCard extends StatelessWidget {
         leading: Icon(
           icon,
           color: Colors.white,
-          size: 50,
+          size: 20.sp,
         ),
         subtitle: Text(
           details,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 14.sp,
             fontWeight: FontWeight.w300,
             color: Colors.white,
             fontFamily: "Lufga",

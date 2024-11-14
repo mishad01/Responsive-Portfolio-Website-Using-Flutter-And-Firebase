@@ -24,7 +24,18 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
       color: Colors.yellow,
       child: Stack(
         children: [
-          //V1
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 250), // Adjust duration as needed
+            curve: Curves.easeInOut, // Customize the animation curve
+            top: isHover
+                ? 100
+                : MediaQuery.of(context).size.height, // Start from bottom
+            left: 1,
+            right: 50,
+            child: SvgPicture.asset(AssetsPath.v3),
+          ),
+          //V1C
+
           isHover
               ? Container()
               : Positioned(
@@ -33,6 +44,7 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
                   right: 1.h,
                   child: Center(child: SvgPicture.asset(AssetsPath.v1)),
                 ),
+
           //Hello
           Positioned(
             top: 4.h,
@@ -110,16 +122,6 @@ class _DetailsScreenViewState extends State<DetailsScreenView> {
             ),
           ),
 
-          AnimatedPositioned(
-            duration: Duration(milliseconds: 250), // Adjust duration as needed
-            curve: Curves.easeInOut, // Customize the animation curve
-            top: isHover
-                ? 100
-                : MediaQuery.of(context).size.height, // Start from bottom
-            left: 1,
-            right: 50,
-            child: SvgPicture.asset(AssetsPath.v3),
-          ),
           //person
           Positioned(
             top: 18.h,
